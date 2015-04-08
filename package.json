@@ -1,0 +1,11 @@
+{
+  "name": "anz-hackday",
+  "version": "1.0.0",
+  "description": "Sample historical transaction visualizations using D3 and Angular\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "HackStars!",
+  "license": "ISC"
+}
