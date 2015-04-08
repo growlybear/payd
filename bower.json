@@ -1,0 +1,16 @@
+{
+  "name": "anz-hackday",
+  "version": "0.0.1",
+  "authors": [
+    "Michael Allan <michaelallan@optushome.com.au>"
+  ],
+  "description": "ANZ Hackday project",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
