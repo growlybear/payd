@@ -3,7 +3,7 @@ hackApp.directive('donutChart', function () {
   function link(scope, el, attr) {
 
     var color = d3.scale.category10();
-    var data = [10, 20, 30];
+    var data = scope.data;
     var width = 300;
     var height = 300;
     var min = Math.min(width, height);
@@ -28,6 +28,9 @@ hackApp.directive('donutChart', function () {
 
   return {
     link: link,
-    restrict: 'E'
+    restrict: 'E',
+    scope: {
+      data: '='
+    }
   };
 });
