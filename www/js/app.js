@@ -1,1 +1,1 @@
-var hackApp = angular.module('hackApp', [])
+var payd = angular.module('payd', [])

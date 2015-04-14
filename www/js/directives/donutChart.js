@@ -1,4 +1,4 @@
-hackApp.directive('donutChart', function () {
+payd.directive('donutChart', function () {
 
   function link(scope, el, attr) {
 
@@ -13,22 +13,40 @@ hackApp.directive('donutChart', function () {
       .outerRadius(min / 2 * 0.9)
       .innerRadius(min / 2 * 0.5);
 
-    svg.attr({width: width, height: height});
+    svg.attr({ width: width, height: height });
+
+    // center the donut chart
     var g = svg.append('g')
-      // center the donut chart
-      .attr('transform', 'translate(' + width / 2 + ',' + height / 2 + ')');
+      .attr(
+        'transform',
+        'translate(' + width / 2 + ',' + height / 2 + ')'
+      );
 
     // add the <path>s for each arc slice
-    g.selectAll('path').data(pie(data))
-      .enter().append('path')
+    var arcs = g.selectAll('path');
+
+    // update the chart when new data is loaded
+    // cf. http://bl.ocks.org/vicapow/9536234
+    scope.$watch('data', function (data) {
+      if (!data) { return; }
+
+      arcs = arcs.data(pie(data));
+      arcs.exit().remove();
+      arcs.enter().append('path')
         .style('stroke', 'white')
-        .attr('d', arc)
-        .attr('fill', function(d, i){ return color(i) });
+        .attr('fill', function (d, i) {
+          return color(i);
+        });
+
+      // update all the arcs (not just the ones that might have been added)
+      arcs.attr('d', arc);
+    }, true);
+
   }
 
   return {
     link: link,
-    restrict: 'E',
+    restrict: 'EA',
     scope: {
       data: '='
     }
