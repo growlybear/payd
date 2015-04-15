@@ -1,1 +1,1 @@
-var payd = angular.module('payd', [])
+var payd = angular.module('payd', ['nvd3']);
