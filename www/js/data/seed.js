@@ -33,15 +33,13 @@ casual.define('transaction', function () {
   };
 });
 
+// Load up some transactions
 var ret = [];
 for (var i = 0; i < 100; i++) {
   ret.push(casual.transaction);
 }
 
-var options = {
-  noColor: true
-};
-
+// Persist them to disk
 fs.writeFile('sample.json', jsonFormat(ret), function (err) {
   if (err) throw err;
 
