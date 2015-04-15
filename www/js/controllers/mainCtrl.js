@@ -1,4 +1,4 @@
-payd.controller('MainCtrl', function ($scope) {
+payd.controller('MainCtrl', function ($scope, $http) {
 
   $scope.options = {
     chart: {
@@ -24,14 +24,14 @@ payd.controller('MainCtrl', function ($scope) {
     }
   };
 
-  $scope.data = [
-    { key: "One", y: 5 },
-    { key: "Two", y: 2 },
-    { key: "Three", y: 9 },
-    { key: "Four", y: 7 },
-    { key: "Five", y: 4 },
-    { key: "Six", y: 3 },
-    { key: "Seven", y: .5 }
-  ];
+  $scope.data = [];
+
+  // fetch aggregated data
+  $http.get('js/data/spendingByCategory.json')
+    .then(function (response) {
+      $scope.data = response.data;
+    }, function (err) {
+      throw err;
+    });
 
 });
