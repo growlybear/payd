@@ -9,7 +9,7 @@ casual.define('transaction', function () {
     date: casual.date(format = 'YYYY-MM-DD'),
     description: casual.short_description,
     category: casual.random_element([
-      'Rent / Mortgage',
+      'Rent/Mortgage',
       'Utilities',
       'Super',
       'Car Loan',
@@ -39,9 +39,40 @@ for (var i = 0; i < 100; i++) {
   ret.push(casual.transaction);
 }
 
-// Persist them to disk
-fs.writeFile('sample.json', jsonFormat(ret), function (err) {
+// Aggregage and transform for nvd3 donut chart
+// FIXME nasty imperative code that need refactoring ... sorry :-(
+function aggregate(arr) {
+  var totals = {};
+  var ret = [];
+
+  arr.map(function (item) {
+    if (!totals[item.category]) {
+      totals[item.category] = 0;
+    }
+    totals[item.category] += item.amount;
+  });
+
+  for (var key in totals) {
+    var obj = {};
+    obj.key = key;
+    obj.y = Math.abs(totals[key]);
+    ret.push(obj);
+  }
+
+  return ret;
+}
+
+
+// Persist aggregated data to disk
+fs.writeFile('spendingByCategory.json', jsonFormat(aggregate(ret)), function (err) {
   if (err) throw err;
 
   console.log('Seeded data');
 });
+
+// Persist raw data to disk
+// fs.writeFile('sample.json', jsonFormat(ret), function (err) {
+//   if (err) throw err;
+
+//   console.log('Seeded data');
+// });
