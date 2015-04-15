@@ -52,7 +52,7 @@ casual.define('payment', function () {
 
     return {
       id: casual.random,
-      date: moment(casual.double(new Date(2014, 4, 1).getTime(), new Date().getTime())).format('DD-MM-YYYY HH:mm:ss'),
+      date: moment(casual.double(new Date(2014, 4, 1).getTime(), new Date().getTime())).format('D MMM'),
       description: casual.short_description,
       category: cat,
       tags: [allTags[cat]],
