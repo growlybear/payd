@@ -1,4 +1,9 @@
-var payd = angular.module('payd', ['ui.router', 'nvd3', 'smart-table']);
+var payd = angular.module('payd', [
+  'ui.router',
+  'nvd3',
+  'smart-table',
+  'ui.bootstrap'
+]);
 
 payd.config(function ($stateProvider, $urlRouterProvider) {
 
