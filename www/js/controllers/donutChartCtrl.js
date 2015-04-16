@@ -25,7 +25,7 @@ payd.controller('DonutChartCtrl', function ($scope, $http) {
   };
 
   // fetch aggregated data
-  $http.get('js/data/spendingByCategoryDonut.json')
+  $http.get('js/data/spending.donut.json')
     .then(function (response) {
       $scope.data = response.data;
     }, function (err) {
