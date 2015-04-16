@@ -19,8 +19,24 @@ payd.config(function ($stateProvider, $urlRouterProvider) {
       templateUrl: 'templates/transactions.html'
     })
     .state('analyse', {
+      abstract: true,
       url: '/analyse',
       templateUrl: 'templates/analyse.html'
+    })
+      .state('analyse.donut', {
+          url: '',
+          templateUrl: 'templates/bar.html',
+          controller: 'DonutChartCtrl'
+      })
+      .state('analyse.bar', {
+        url: '/bar',
+        templateUrl: 'templates/bar.html',
+        controller: 'BarChartCtrl'
+      })
+    .state('bar', {
+      url: '/bar',
+      templateUrl: 'templates/bar.html',
+      controller: 'BarChartCtrl'
     })
     .state('about', {
       url: '/about',
