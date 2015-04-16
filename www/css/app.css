@@ -1,5 +1,6 @@
 body {
   background: white;
+  font-family: "Myriad Pro", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
 }
 
 /* stretchy about page image */
@@ -32,37 +33,32 @@ body {
 }
 
 /* individual transaction/category boxes */
-.payment_box {
+.payment-box {
   border-width: 0.69px;
   border-color: rgb(215, 215, 215);
   border-style: solid;
   border-radius: 6px;
   background-color: rgb(255, 255, 255);
   box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.15);
-  position: absolute;
-  left: 210px;
-  top: 366px;
-  width: 781px;
   height: 74px;
-  z-index: 41;
+}
+
+.panel-title {
+  color: #8b8b8b;
+  margin: 19px 0 0 50px;
 }
 
 /* coloured history/detail boxes */
-.history_detail {
+.history-detail {
   border-width: 2px;
   border-color: rgb(152, 223, 137); /* colour needs to be customised */
   border-style: solid;
   border-radius: 6px;
-  position: absolute;
-  left: 210px;
-  top: 526px;
-  width: 777px;
   height: 70px;
-  z-index: 103;
 }
 
 /* flyout/more actions */
-.more_function {
+.more-function {
   border-width: 1px;
   border-color: rgb(215, 215, 215);
   border-style: solid;
@@ -89,12 +85,12 @@ body {
 #category-accordion .panel-heading {
   padding-left: 40px;
 }
-#category-accordion .panel:nth-child(1) .panel-heading { background: url('../img/svg/utilities.svg') no-repeat; }
-#category-accordion .panel:nth-child(2) .panel-heading { background: url('../img/svg/super.svg') no-repeat; }
-#category-accordion .panel:nth-child(3) .panel-heading { background: url('../img/svg/membership.svg') no-repeat; }
-#category-accordion .panel:nth-child(4) .panel-heading { background: url('../img/svg/entertainment.svg') no-repeat; }
-#category-accordion .panel:nth-child(5) .panel-heading { background: url('../img/svg/car-loan.svg') no-repeat; }
-#category-accordion .panel:nth-child(6) .panel-heading { background: url('../img/svg/rent-mortgage.svg') no-repeat; }
-#category-accordion .panel:nth-child(7) .panel-heading { background: url('../img/svg/medical.svg') no-repeat; }
-#category-accordion .panel:nth-child(8) .panel-heading { background: url('../img/svg/misc.svg') no-repeat; }
-#category-accordion .panel:nth-child(9) .panel-heading { background: url('../img/svg/more.svg') no-repeat; }
+#category-accordion .panel:nth-child(1) .panel-heading { background: url('../img/svg/rent-mortgage.svg') 6px no-repeat; }
+#category-accordion .panel:nth-child(2) .panel-heading { background: url('../img/svg/super.svg') 6px no-repeat; }
+#category-accordion .panel:nth-child(3) .panel-heading { background: url('../img/svg/utilities.svg') 6px no-repeat; }
+#category-accordion .panel:nth-child(4) .panel-heading { background: url('../img/svg/car-loan.svg') 6px no-repeat; }
+#category-accordion .panel:nth-child(5) .panel-heading { background: url('../img/svg/membership.svg') 6px no-repeat; }
+#category-accordion .panel:nth-child(6) .panel-heading { background: url('../img/svg/entertainment.svg') 6px no-repeat; }
+#category-accordion .panel:nth-child(7) .panel-heading { background: url('../img/svg/medical.svg') 6px no-repeat; }
+#category-accordion .panel:nth-child(8) .panel-heading { background: url('../img/svg/misc.svg') 6px no-repeat; }
+#category-accordion .panel:nth-child(9) .panel-heading { background: url('../img/svg/more.svg') 6px no-repeat; }

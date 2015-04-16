@@ -7,11 +7,11 @@ payd.controller('CategoryAccordionCtrl', function ($scope, $sce) {
       content: 'Dynamic Group Body - 1'
     },
     {
-      title: 'Utilities',
+      title: 'Super',
       content: 'Dynamic Group Body - 2'
     },
     {
-      title: 'Super',
+      title: 'Utilities',
       content: 'Dynamic Group Body - 2'
     },
     {
@@ -19,15 +19,15 @@ payd.controller('CategoryAccordionCtrl', function ($scope, $sce) {
       content: 'Dynamic Group Body - 2'
     },
     {
-      title: 'Memberships',
-      content: 'Dynamic Group Body - 2'
-    },
-    {
-      title: 'Medical',
+      title: 'Membership',
       content: 'Dynamic Group Body - 2'
     },
     {
       title: 'Entertainment',
+      content: 'Dynamic Group Body - 2'
+    },
+    {
+      title: 'Medical',
       content: 'Dynamic Group Body - 2'
     },
     {
