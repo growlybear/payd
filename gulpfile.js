@@ -18,8 +18,14 @@ gulp.task('css', function () {
     .pipe(connect.reload());
 });
 
+gulp.task('js', function () {
+  gulp.src('./www/js/**/*.js')
+    .pipe(connect.reload());
+});
+
 gulp.task('watch', function () {
   gulp.watch(['./www/*.html', './www/templates/*.html'], ['html']);
+  gulp.watch(['./www/js/**/*.js'], ['js']);
   gulp.watch(['./www/css/*.css'], ['css']);
 });
 
