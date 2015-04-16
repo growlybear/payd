@@ -12,5 +12,17 @@
     "casual": "^1.4.7",
     "json-format": "0.0.1",
     "moment": "^2.10.2"
-  }
+  },
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-connect": "^2.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/growlybear/payd.git"
+  },
+  "bugs": {
+    "url": "https://github.com/growlybear/payd/issues"
+  },
+  "homepage": "https://github.com/growlybear/payd"
 }
