@@ -7,4 +7,9 @@ payd.controller('MainCtrl', function ($scope, $http) {
       throw err;
     });
 
+
+  $scope.search = function () {
+    console.log('Search');
+  };
+
 });
