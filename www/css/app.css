@@ -123,6 +123,10 @@ body {
   width: 50px;
 }
 
+.payd-form {
+  margin-bottom:15px;
+}
+
 /*
   ANZ header
   dark blue (left of logo): #004165
