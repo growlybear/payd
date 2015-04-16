@@ -29,6 +29,14 @@ payd.controller('CategoryAccordionCtrl', function ($scope, $sce) {
     {
       title: 'Entertainment',
       content: 'Dynamic Group Body - 2'
+    },
+    {
+      title: 'Misc',
+      content: 'Dynamic Group Body - 2'
+    },
+    {
+      title: 'Dots',
+      content: 'Dynamic Group Body - 2'
     }
   ];
 
