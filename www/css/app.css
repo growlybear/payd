@@ -73,6 +73,14 @@ body {
   z-index: 131;
 }
 
+
+.dropdown-dots {
+  display: block;
+  background: url('../img/svg/more.svg') 6px no-repeat;
+  height: 50px;
+  width: 50px;
+}
+
 /*
   ANZ header
   dark blue (left of logo): #004165
