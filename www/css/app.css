@@ -3,6 +3,53 @@ body {
   font-family: "Myriad Pro", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
 }
 
+/* bootstrap overrides */
+.navbar {
+  border: none;
+  background-image: url('../img/background-header.png');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 0;
+  height: 40px;
+}
+
+.navbar .container {
+  background-color: #007dba;
+  height: 40px;
+}
+
+.navbar-header {
+  color: #fff;
+  height: 40px;
+}
+
+.navbar-default .navbar-nav > li {
+  min-height: 40px;
+  height: 40px;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: #fff;
+  line-height: 40px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.navbar .navbar-brand {
+  color: #fff;
+  height: 40px; /* yah ... hackday ;-) */
+  line-height: 42px;
+  padding: 0;
+}
+
+.logo {
+  float: left;
+  margin-right: 20px;
+}
+
+
 /* stretchy about page image */
 .prize {
   width: 100%;
@@ -54,7 +101,7 @@ body {
   border-width: 2px;
   border-color: rgb(152, 223, 137); /* colour needs to be customised */
   border-style: solid;
-  border-radius: 6px;
+  /*border-radius: 6px;*/
   height: 70px;
 }
 
@@ -65,12 +112,7 @@ body {
   border-style: solid;
   background-color: rgb(255, 255, 255);
   box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.15);
-  position: absolute;
-  left: 813px;
-  top: 511px;
-  width: 198px;
   height: 192px;
-  z-index: 131;
 }
 
 /*
