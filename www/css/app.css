@@ -37,8 +37,7 @@ body {
 .navbar-default .navbar-nav > li > a {
   color: #fff;
   line-height: 40px;
-  padding-top: 0;
-  padding-bottom: 0;
+  padding: 0 5px;
 }
 
 .navbar .navbar-brand {
@@ -146,6 +145,17 @@ body {
 
   color: #5C5C5C;
   font-size:18px;
+  position: relative;
+}
+
+.transaction .dropdown {
+  position:absolute;
+  right:10px;
+}
+
+.transaction .media {
+  margin-top:0;
+  padding-right: 20px;
 }
 
 .transaction + .transaction {
@@ -157,8 +167,9 @@ body {
   width:75px;
 }
 
-.list-transaction .transaction:last-child {
-  border-bottom:0;
+
+.transaction-dropdown {
+  display: inline-block;
 }
 
 .panel-group .panel {
@@ -169,10 +180,54 @@ body {
 .panel-group .panel .panel-heading {
 }
 
+.panel-group .panel .panel-heading .glyphicon-ok {
+  margin-top:15px;
+  font-size:20px;
+  color: #5cb85c;
+}
+
 .panel-group .panel .panel-body {
   border:0 !important;
   padding:0;
 }
+
+
+.header {
+  height: 150px;
+}
+
+.header h1 {
+  margin-top:50px;
+  color:#fff;
+}
+
+.categories {
+  padding:50px 0;
+  background:#f1f1f1;
+}
+
+.graph img {
+  height: 35px;
+  width: 35px;
+}
+.graph-donut img {
+  height: 30px;
+  width: 30px;
+}
+
+.right-inner-addon {
+  position: relative;
+}
+.right-inner-addon input {
+  padding-right: 30px;
+}
+.right-inner-addon i {
+  position: absolute;
+  right: 0px;
+  padding: 10px 12px;
+  pointer-events: none;
+}
+
 /*
   ANZ header
   dark blue (left of logo): #004165

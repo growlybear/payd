@@ -1,28 +1,74 @@
-<form class="payd-form">
-  <div class="input-group input-group-lg">
-    <span class="input-group-addon" id="sizing-addon1">@</span>
-    <input type="text" class="form-control" placeholder="Search for" aria-describedby="sizing-addon1" ng-keypress="search()">
+<div class="header">
+  <div class="container">
+    <h1>Categories</h1>
+    <form class="payd-form pull-right">
+      <div>
+        <div class="right-inner-addon">
+        <i class="glyphicon glyphicon-search"></i>
+        <input type="search" class="form-control" ng-change="search()" ng-model="searchTerms" placeholder="Search" />
+      </div>
+    </form>
   </div>
-</form>
-<div ng-controller="CategoryAccordionCtrl" id="category-accordion">
-  <accordion close-others="true">
-    <!-- FIXME anyone know how to interpolate some html into the {{ curlies }}??? -->
-    <accordion-group heading="{{ category.title }}" ng-repeat="category in categories">
-      <ul class="list-unstyled list-transaction">
-        <li class="transaction" ng-repeat="transaction in category.content.transactions">
-          <div class="media">
-            <div class="media-object pull-right">
-              {{'$' + transaction.amount.toFixed(2)}}
-            </div>
-            <div class="media-body">
-              <span class="transaction-date">
-                {{transaction.date}}
-              </span>
-              {{transaction.description}}
-            </div>
-          </div>
-        </li>
-      </ul>
-    </accordion-group>
-  </accordion>
+
 </div>
+
+<section class="categories">
+
+  <div class="container" ng-if="searchTerms">
+    <ul class="list-unstyled list-transaction">
+      <li class="transaction" ng-repeat="transaction in searchResults">
+        <div class="media">
+          <div class="media-object pull-right">
+            {{'$' + transaction.amount.toFixed(2)}}
+          </div>
+          <div class="media-body">
+            <span class="transaction-date">
+              {{transaction.date}}
+            </span>
+            {{transaction.description}}
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="container" ng-if="!searchTerms">
+    <div ng-controller="CategoryAccordionCtrl" id="category-accordion">
+      <accordion close-others="true">
+        <!-- FIXME anyone know how to interpolate some html into the {{ curlies }}??? -->
+        <accordion-group heading="{{ category.title }}" ng-repeat="category in categories">
+          <ul class="list-unstyled list-transaction">
+            <li class="transaction" ng-repeat="transaction in category.content.transactions">
+              <div class="dropdown transaction-dropdown pull-right" dropdown>
+                <a class="glyphicon glyphicon-option-vertical dropdown-toggle" dropdown-toggle></a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a href="">Archive</a>
+                  </li>
+                  <li>
+                    <a href="">Tag</a>
+                  </li>
+                  <li role="presentation" class="dropdown-header">Move to</li>
+                  <li>
+                    <a href="">Rent/Mortgage</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="media">
+                <div class="media-object pull-right">
+                  {{'$' + transaction.amount.toFixed(2)}}
+                </div>
+                <div class="media-body">
+                  <span class="transaction-date">
+                    {{transaction.date}}
+                  </span>
+                  {{transaction.description}}
+                </div>
+              </div>
+            </li>
+          </ul>
+        </accordion-group>
+      </accordion>
+    </div>
+  </div>
+</section>
