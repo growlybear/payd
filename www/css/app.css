@@ -173,10 +173,6 @@ body {
   display: inline-block;
 }
 
-.list-transaction .transaction:last-child {
-  border-bottom:0;
-}
-
 .panel-group .panel {
   border:0;
   background: transparent;
@@ -195,6 +191,22 @@ body {
   border:0 !important;
   padding:0;
 }
+
+
+.header {
+  height: 150px;
+}
+
+.header h1 {
+  margin-top:50px;
+  color:#fff;
+}
+
+.categories {
+  padding:50px 0;
+  background:#f1f1f1;
+}
+
 /*
   ANZ header
   dark blue (left of logo): #004165
