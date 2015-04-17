@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
 
-  <title>PAYD</title>
+  <title>PayD</title>
 
   <link rel="stylesheet" href="components/bootstrap/dist/css/bootstrap.css">
   <link rel="stylesheet" href="components/nvd3/nv.d3.css">
@@ -19,8 +19,10 @@
 
       <ul class="nav navbar-nav navbar-right">
         <!-- <li><a ui-sref="transactions">Transactions</a></li> -->
-        <li><a ui-sref="analyse.donut">Analyse</a></li>
-        <li><a ui-sref="about">About</a></li>
+        <li><a>View</a></li>
+        <li><a ui-sref="analyse.donut" class="graph graph-donut"><img src="img/svg/donut.svg"></a></li>
+        <li><a ui-sref="analyse.bar" class="graph"><img src="img/svg/list-view.svg"></a></li>
+        <!-- <li><a ui-sref="about">About</a></li> -->
       </ul>
     </div>
   </nav>
@@ -58,7 +60,7 @@
       "        <a class=\"dropdown-toggle dropdown-dots\" dropdown-toggle></a> " +
       "<ul class=\"dropdown-menu\"> " +
         "<li>" +
-          "<a href>Arhive All</a>" +
+          "<a href>Archive All</a>" +
         "</li>" +
       "</ul> "+
       "      </div>" +

@@ -37,8 +37,7 @@ body {
 .navbar-default .navbar-nav > li > a {
   color: #fff;
   line-height: 40px;
-  padding-top: 0;
-  padding-bottom: 0;
+  padding: 0 5px;
 }
 
 .navbar .navbar-brand {
@@ -205,6 +204,28 @@ body {
 .categories {
   padding:50px 0;
   background:#f1f1f1;
+}
+
+.graph img {
+  height: 35px;
+  width: 35px;
+}
+.graph-donut img {
+  height: 30px;
+  width: 30px;
+}
+
+.right-inner-addon {
+  position: relative;
+}
+.right-inner-addon input {
+  padding-right: 30px;
+}
+.right-inner-addon i {
+  position: absolute;
+  right: 0px;
+  padding: 10px 12px;
+  pointer-events: none;
 }
 
 /*
