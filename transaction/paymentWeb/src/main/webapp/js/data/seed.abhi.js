@@ -52,12 +52,12 @@ casual.define('payment', function () {
 
     return {
       id: casual.random,
-      date: moment(casual.double(new Date(2014, 4, 1).getTime(), new Date().getTime())).format('D MMM'),
+      date: moment(casual.double(new Date(2014, 4, 1).getTime(), new Date().getTime())).format('yyyy/MM/dd HH:mm:ss'),
       description: casual.short_description,
       category: cat,
       tags: [allTags[cat]],
       amount:casual.integer(from= 10, to= casual.integer(from= 100, to= casual.integer(from= 600, to= 1800 ))),
-      fromUser: 'Michael Allan',
+      fromUser: 'michael',
       toUser: toUsers[userIndex],
       merchant: casual.integer(from = (10*userIndex), to = ((10*userIndex)+10))
     };
@@ -65,10 +65,10 @@ casual.define('payment', function () {
 
 var ret = [];
 
-for (var i = 100; i >= 0; i--) {
+for (var i = 1000; i >= 0; i--) {
   ret.push(casual.payment);
 };
-
+console.log(ret)
 // Persist raw data to disk
 fs.writeFile('sample.abhi.json', jsonFormat(ret), function (err) {
   if (err) throw err;

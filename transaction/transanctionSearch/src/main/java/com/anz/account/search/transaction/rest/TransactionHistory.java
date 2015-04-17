@@ -2,6 +2,7 @@ package com.anz.account.search.transaction.rest;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
@@ -78,7 +79,11 @@ public class TransactionHistory {
 	public ResponseEntity<?> search(@PathVariable("searchStr") String searchStr) {
 		Page<Transaction> searchCustom = elasticService.searchCustom(searchStr,
 				new PageRequest(0, 100));
-		return new ResponseEntity<>(searchCustom.getContent(),
+		List<Transaction> content = new ArrayList<Transaction>();
+		if (searchCustom != null && searchCustom.getTotalElements()>0) {
+			content = searchCustom.getContent();
+		}
+		return new ResponseEntity<>(content,
 				HttpStatus.ACCEPTED);
 	}
 	

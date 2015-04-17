@@ -95,10 +95,14 @@ public class ElasticServiceImpl implements ElasticService {
 	public Page<Transaction> searchCustom(String searchStr, Pageable page) {
 
 		try {
+			
+			if(!searchStr.contains(":")){
+				searchStr = searchStr.toLowerCase() ;
+			}
 
 			BoolQueryBuilder builder = boolQuery();
 			QueryStringQueryBuilder queryString = QueryBuilders
-					.queryStringQuery(searchStr.toLowerCase());
+					.queryStringQuery(searchStr);
 			queryString.defaultOperator(Operator.AND);
 			builder.must(queryString)
 					.must(QueryBuilders.queryStringQuery("fromAccount:"
