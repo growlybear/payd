@@ -127,6 +127,13 @@ body {
   margin-bottom:15px;
 }
 
+
+.transaction {
+  padding-bottom:10px;
+  border-bottom:solid 1px #ccc;
+
+}
+
 /*
   ANZ header
   dark blue (left of logo): #004165
