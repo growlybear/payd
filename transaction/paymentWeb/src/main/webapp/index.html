@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>PAYD</title>
+
+  <link rel="stylesheet" href="components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="components/nvd3/nv.d3.css">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body ng-app="payd">
+
+  <nav class="navbar navbar-default navbar-static-top">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" ui-sref="home"><img src="img/anz-logo.png" class="logo" alt="">PayD</a>
+      </div>
+
+      <ul class="nav navbar-nav navbar-right">
+        <!-- <li><a ui-sref="transactions">Transactions</a></li> -->
+        <li><a ui-sref="analyse.donut">Analyse</a></li>
+        <li><a ui-sref="about">About</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container" ng-controller="MainCtrl">
+    <div ui-view></div>
+  </div>
+
+  <script src="components/angular/angular.js"></script>
+  <script src="components/d3/d3.js"></script>
+  <script src="components/nvd3/nv.d3.js"></script>
+  <script src="components/angular-nvd3/dist/angular-nvd3.js"></script>
+  <script src="components/angular-ui-router/release/angular-ui-router.js"></script>
+  <script src="components/angular-smart-table/dist/smart-table.js"></script>
+  <script src="components/angular-bootstrap/ui-bootstrap.js"></script>
+  <script src="components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+
+  <script src="js/app.js"></script>
+  <script src="js/directives/donutChart.js"></script>
+  <script src="js/controllers/mainCtrl.js"></script>
+  <script src="js/controllers/categoryAccordionCtrl.js"></script>
+  <script src="js/controllers/donutChartCtrl.js"></script>
+  <script src="js/controllers/barChartCtrl.js"></script>
+
+
+  <script>
+    angular.module("template/accordion/accordion-group.html", []).run(["$templateCache", function($templateCache) {
+      $templateCache.put("template/accordion/accordion-group.html",
+        "<div class=\"panel panel-default\">\n" +
+        "  <div class=\"panel-heading payment-box\">\n" +
+        " "+
+      "      <div class=\"pull-right dropdown\" dropdown > " +
+      "        <a class=\"dropdown-toggle dropdown-dots\" dropdown-toggle></a> " +
+      "<ul class=\"dropdown-menu\"> " +
+        "<li>" +
+          "<a href>Test</a>" +
+        "</li>" +
+      "</ul> "+
+      "      </div>" +
+        "    <h4 class=\"panel-title\">\n" +
+        "      <a href class=\"accordion-toggle\" ng-click=\"toggleOpen()\" accordion-transclude=\"heading\"><span ng-class=\"{'text-muted': isDisabled}\">{{heading}}</span></a>\n" +
+        "    </h4>\n" +
+        "  </div>\n" +
+        "  <div class=\"panel-collapse\" collapse=\"!isOpen\">\n" +
+        "	  <div class=\"panel-body history-detail\" ng-transclude></div>\n" +
+        "  </div>\n" +
+        "</div>\n" +
+        "");
+    }]);
+
+    angular.module("template/accordion/accordion.html", []).run(["$templateCache", function($templateCache) {
+      $templateCache.put("template/accordion/accordion.html",
+        "<div class=\"panel-group\" ng-transclude></div>");
+    }]);
+
+  </script>
+</body>
+</html>
