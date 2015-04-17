@@ -146,6 +146,17 @@ body {
 
   color: #5C5C5C;
   font-size:18px;
+  position: relative;
+}
+
+.transaction .dropdown {
+  position:absolute;
+  right:10px;
+}
+
+.transaction .media {
+  margin-top:0;
+  padding-right: 20px;
 }
 
 .transaction + .transaction {
@@ -155,6 +166,11 @@ body {
 .transaction-date {
   display: inline-block;
   width:75px;
+}
+
+
+.transaction-dropdown {
+  display: inline-block;
 }
 
 .list-transaction .transaction:last-child {
