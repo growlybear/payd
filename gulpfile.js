@@ -26,7 +26,7 @@ gulp.task('js', function () {
 
 gulp.task('copy', function () {
   gulp.src('./www/js')
-    .pipe(gulp.dest('./transaction/paymentWeb/src/main/mike'));
+    .pipe(gulp.dest('./transaction/paymentWeb/src/main/webapp/js'));
 });
 
 gulp.task('watch', function () {
