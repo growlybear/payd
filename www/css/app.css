@@ -1,5 +1,9 @@
 body {
-  background: white;
+  background-image: url('../img/yellow-flowers.jpg');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   font-family: "Myriad Pro", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
 }
 
