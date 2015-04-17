@@ -8,7 +8,9 @@
   <accordion close-others="true">
     <!-- FIXME anyone know how to interpolate some html into the {{ curlies }}??? -->
     <accordion-group heading="{{ category.title }}" ng-repeat="category in categories">
-      {{ category.content }}
+      <ul class="list-unstyled">
+        <li ng-repeat="transaction in category.content.transactions">{{transaction.name}}</li>
+      </ul>
     </accordion-group>
   </accordion>
 </div>

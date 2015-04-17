@@ -8,7 +8,12 @@ payd.controller('CategoryAccordionCtrl', function ($scope, $sce) {
     },
     {
       title: 'Super',
-      content: 'Dynamic Group Body - 2'
+      content: {
+        transactions: [{
+          name: 'Thing',
+          amount: '123'
+        }]
+      }
     },
     {
       title: 'Utilities',
