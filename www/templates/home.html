@@ -5,14 +5,34 @@
       <div>
         <div class="right-inner-addon">
         <i class="glyphicon glyphicon-search"></i>
-        <input type="search" class="form-control" placeholder="Search" />
+        <input type="search" class="form-control" ng-change="search()" ng-model="searchTerms" placeholder="Search" />
       </div>
     </form>
   </div>
 
 </div>
+
 <section class="categories">
-  <div class="container">
+
+  <div class="container" ng-if="searchTerms">
+    <ul class="list-unstyled list-transaction">
+      <li class="transaction" ng-repeat="transaction in searchResults">
+        <div class="media">
+          <div class="media-object pull-right">
+            {{'$' + transaction.amount.toFixed(2)}}
+          </div>
+          <div class="media-body">
+            <span class="transaction-date">
+              {{transaction.date}}
+            </span>
+            {{transaction.description}}
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="container" ng-if="!searchTerms">
     <div ng-controller="CategoryAccordionCtrl" id="category-accordion">
       <accordion close-others="true">
         <!-- FIXME anyone know how to interpolate some html into the {{ curlies }}??? -->

@@ -33,6 +33,7 @@ payd.controller('CategoryAccordionCtrl', function ($scope, $sce) {
   $scope.categories = [
     {
       title: 'Rent / Mortgage',
+      totalAmount: 1223.00,
       content: {
         transactions: transactions
       }
