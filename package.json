@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "casual": "^1.4.7",
+    "gulp-copy": "0.0.2",
     "json-format": "0.0.1",
     "moment": "^2.10.2"
   },

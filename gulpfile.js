@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 var connect = require('gulp-connect');
+var copy = require('gulp-copy');
 
 gulp.task('connect', function() {
   connect.server({
@@ -21,6 +22,11 @@ gulp.task('css', function () {
 gulp.task('js', function () {
   gulp.src('./www/js/**/*.js')
     .pipe(connect.reload());
+});
+
+gulp.task('copy', function () {
+  gulp.src('./www/js')
+    .pipe(gulp.dest('./transaction/paymentWeb/src/main/mike'));
 });
 
 gulp.task('watch', function () {
