@@ -210,6 +210,23 @@ body {
   height: 35px;
   width: 35px;
 }
+.graph-donut img {
+  height: 30px;
+  width: 30px;
+}
+
+.right-inner-addon {
+  position: relative;
+}
+.right-inner-addon input {
+  padding-right: 30px;
+}
+.right-inner-addon i {
+  position: absolute;
+  right: 0px;
+  padding: 10px 12px;
+  pointer-events: none;
+}
 
 /*
   ANZ header
