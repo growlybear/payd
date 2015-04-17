@@ -169,6 +169,12 @@ body {
 .panel-group .panel .panel-heading {
 }
 
+.panel-group .panel .panel-heading .glyphicon-ok {
+  margin-top:15px;
+  font-size:20px;
+  color: #5cb85c;
+}
+
 .panel-group .panel .panel-body {
   border:0 !important;
   padding:0;
