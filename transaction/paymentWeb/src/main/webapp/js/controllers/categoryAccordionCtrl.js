@@ -1,4 +1,4 @@
-payd.controller('CategoryAccordionCtrl', function ($scope, $sce,$http) {
+payd.controller('CategoryAccordionCtrl', function ($scope, $sce, $http) {
   $scope.oneAtATime = true;
 
   var transactions = [
@@ -33,6 +33,7 @@ payd.controller('CategoryAccordionCtrl', function ($scope, $sce,$http) {
   $scope.categories = [
     {
       title: 'Mortgage',
+      totalAmount: 1223.00,
       content: {
         transactions: transactions
       }
@@ -86,12 +87,12 @@ payd.controller('CategoryAccordionCtrl', function ($scope, $sce,$http) {
       }
     }
   ];
-  
-  
+
+
   for(var index in $scope.categories){
 	  var cato = $scope.categories[index] ;
-	  
-	  $http.get('/transanctionSearch/transactionHistory/search/category:'+cato.title+'')
+
+	  $http.get('/transanctionSearch/transactionHistory/search/category:' + cato.title + '')
 	    .then(function (response) {
 	      cato.content.transactions = response;
 	    }, function (err) {
