@@ -22,8 +22,7 @@ payd.controller('BarChartCtrl', function ($scope, $http) {
   };
 
   // fetch aggregated data
-//  $http.get('js/data/spending.bar.json')
-  $http.get('/transanctionSearch/transactionHistory/getBar')
+  $http.get('js/data/spending.bar.json')
     .then(function (response) {
       $scope.data = response.data;
     }, function (err) {

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
 
-  <title>PAYD</title>
+  <title>PayD</title>
 
   <link rel="stylesheet" href="components/bootstrap/dist/css/bootstrap.css">
   <link rel="stylesheet" href="components/nvd3/nv.d3.css">
@@ -19,14 +19,18 @@
 
       <ul class="nav navbar-nav navbar-right">
         <!-- <li><a ui-sref="transactions">Transactions</a></li> -->
-        <li><a ui-sref="analyse.donut">Analyse</a></li>
-        <li><a ui-sref="about">About</a></li>
+        <li><a>View</a></li>
+        <li><a ui-sref="analyse.donut" class="graph graph-donut"><img src="img/svg/donut.svg"></a></li>
+        <li><a ui-sref="analyse.bar" class="graph"><img src="img/svg/list-view.svg"></a></li>
+        <!-- <li><a ui-sref="about">About</a></li> -->
       </ul>
     </div>
   </nav>
 
-  <div class="container" ng-controller="MainCtrl">
-    <div ui-view></div>
+  <div ng-controller="MainCtrl">
+    <div ui-view>
+
+    </div>
   </div>
 
   <script src="components/angular/angular.js"></script>
@@ -51,15 +55,16 @@
       $templateCache.put("template/accordion/accordion-group.html",
         "<div class=\"panel panel-default\">\n" +
         "  <div class=\"panel-heading payment-box\">\n" +
-        " "+
+        " " +
       "      <div class=\"pull-right dropdown\" dropdown > " +
       "        <a class=\"dropdown-toggle dropdown-dots\" dropdown-toggle></a> " +
       "<ul class=\"dropdown-menu\"> " +
         "<li>" +
-          "<a href>Test</a>" +
+          "<a href>Archive All</a>" +
         "</li>" +
       "</ul> "+
       "      </div>" +
+        " <i class=\"glyphicon glyphicon-ok pull-right\"></i>"+
         "    <h4 class=\"panel-title\">\n" +
         "      <a href class=\"accordion-toggle\" ng-click=\"toggleOpen()\" accordion-transclude=\"heading\"><span ng-class=\"{'text-muted': isDisabled}\">{{heading}}</span></a>\n" +
         "    </h4>\n" +

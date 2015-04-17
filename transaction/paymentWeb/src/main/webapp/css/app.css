@@ -37,8 +37,7 @@ body {
 .navbar-default .navbar-nav > li > a {
   color: #fff;
   line-height: 40px;
-  padding-top: 0;
-  padding-bottom: 0;
+  padding: 0 5px;
 }
 
 .navbar .navbar-brand {
@@ -132,20 +131,101 @@ body {
 }
 
 .list-transaction {
-  margin-bottom:0;
+  margin-top:10px;
+  margin-bottom:5px;
 }
 
 .transaction {
-  padding-bottom:10px;
-  border-bottom:solid 1px #ccc;
+  padding:10px;
+
+  border-radius: 5px;
+  background:#eee;
+  border:solid 1px #ccc;
+
+
+  color: #5C5C5C;
+  font-size:18px;
+  position: relative;
+}
+
+.transaction .dropdown {
+  position:absolute;
+  right:10px;
+}
+
+.transaction .media {
+  margin-top:0;
+  padding-right: 20px;
 }
 
 .transaction + .transaction {
   margin-top:10px;
 }
 
-.list-transaction .transaction:last-child {
-  border-bottom:0;
+.transaction-date {
+  display: inline-block;
+  width:75px;
+}
+
+
+.transaction-dropdown {
+  display: inline-block;
+}
+
+.panel-group .panel {
+  border:0;
+  background: transparent;
+}
+
+.panel-group .panel .panel-heading {
+}
+
+.panel-group .panel .panel-heading .glyphicon-ok {
+  margin-top:15px;
+  font-size:20px;
+  color: #5cb85c;
+}
+
+.panel-group .panel .panel-body {
+  border:0 !important;
+  padding:0;
+}
+
+
+.header {
+  height: 150px;
+}
+
+.header h1 {
+  margin-top:50px;
+  color:#fff;
+}
+
+.categories {
+  padding:50px 0;
+  background:#f1f1f1;
+}
+
+.graph img {
+  height: 35px;
+  width: 35px;
+}
+.graph-donut img {
+  height: 30px;
+  width: 30px;
+}
+
+.right-inner-addon {
+  position: relative;
+}
+.right-inner-addon input {
+  padding-right: 30px;
+}
+.right-inner-addon i {
+  position: absolute;
+  right: 0px;
+  padding: 10px 12px;
+  pointer-events: none;
 }
 
 /*
@@ -161,12 +241,12 @@ body {
 #category-accordion .panel-heading {
   padding-left: 40px;
 }
-#category-accordion .panel:nth-child(1) .panel-heading { background: url('../img/svg/rent-mortgage.svg') 6px no-repeat; }
-#category-accordion .panel:nth-child(2) .panel-heading { background: url('../img/svg/super.svg') 6px no-repeat; }
-#category-accordion .panel:nth-child(3) .panel-heading { background: url('../img/svg/utilities.svg') 6px no-repeat; }
-#category-accordion .panel:nth-child(4) .panel-heading { background: url('../img/svg/car-loan.svg') 6px no-repeat; }
-#category-accordion .panel:nth-child(5) .panel-heading { background: url('../img/svg/membership.svg') 6px no-repeat; }
-#category-accordion .panel:nth-child(6) .panel-heading { background: url('../img/svg/entertainment.svg') 6px no-repeat; }
-#category-accordion .panel:nth-child(7) .panel-heading { background: url('../img/svg/medical.svg') 6px no-repeat; }
-#category-accordion .panel:nth-child(8) .panel-heading { background: url('../img/svg/misc.svg') 6px no-repeat; }
-#category-accordion .panel:nth-child(9) .panel-heading { background: url('../img/svg/more.svg') 6px no-repeat; }
+#category-accordion .panel:nth-child(1) .panel-heading { background: url('../img/svg/rent-mortgage.svg') 6px no-repeat #fff; }
+#category-accordion .panel:nth-child(2) .panel-heading { background: url('../img/svg/super.svg') 6px no-repeat #fff; }
+#category-accordion .panel:nth-child(3) .panel-heading { background: url('../img/svg/utilities.svg') 6px no-repeat #fff; }
+#category-accordion .panel:nth-child(4) .panel-heading { background: url('../img/svg/car-loan.svg') 6px no-repeat #fff; }
+#category-accordion .panel:nth-child(5) .panel-heading { background: url('../img/svg/membership.svg') 6px no-repeat #fff; }
+#category-accordion .panel:nth-child(6) .panel-heading { background: url('../img/svg/entertainment.svg') 6px no-repeat #fff; }
+#category-accordion .panel:nth-child(7) .panel-heading { background: url('../img/svg/medical.svg') 6px no-repeat #fff; }
+#category-accordion .panel:nth-child(8) .panel-heading { background: url('../img/svg/misc.svg') 6px no-repeat #fff; }
+#category-accordion .panel:nth-child(9) .panel-heading { background: url('../img/svg/more.svg') 6px no-repeat #fff; }
