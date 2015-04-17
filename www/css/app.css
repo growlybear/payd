@@ -152,6 +152,11 @@ body {
   margin-top:10px;
 }
 
+.transaction-date {
+  display: inline-block;
+  width:75px;
+}
+
 .list-transaction .transaction:last-child {
   border-bottom:0;
 }
